@@ -30,13 +30,13 @@ html {
 }
 
 h2 {
-    font-size: 35px;
+    font-size: 60px;
     font-family: Apple Chancery;
     font-weight: bold;
 }
 
 h3 {
-    font-size: 20px;
+    font-size: 30px;
     font-family: Apple Chancery;
     font-weight: normal;    
 }
@@ -54,6 +54,7 @@ h3 {
 
 .bio-text {
     text-align: center;
+    font-size: 20px;
     float: left;
     height: 100%;
     width: 60%;
@@ -69,18 +70,13 @@ h3 {
     padding-right: 20px;
 }
 
-.directory {
+#directory {
     list-style-type: none;
-    text-align: center;
+    text-align: center;  
+    text-decoration: none;  
+    color: black;
+    font-size: 25px;
+
 }
 
-.directory ul li a {
-    text-decoration: none;
-}
-
-.directory { 
-    background-color: white;
-    margin-left: 100px;
-    margin-right: 100px;
-}
 
