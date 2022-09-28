@@ -1,0 +1,86 @@
+* {
+    box-sizing: border-box;
+  }
+
+html {
+    height: 100%;
+    width: 100%;
+    background-image: url("candles.jpg");
+    background-size: 100%;
+    background-repeat: repeat;
+}
+
+.head1 {
+    background-image: url("lavender.jpg");
+    background-position: right;
+    background-color: white;
+    background-repeat: no-repeat;
+    margin-left: 100px;
+    margin-right: 100px;
+    padding-top: 30px;
+    padding-bottom: 40px;
+    text-align: center;
+    
+
+    color: rgb(116, 74, 140);
+}
+
+.head2 {
+    color: white;
+}
+
+h2 {
+    font-size: 35px;
+    font-family: Apple Chancery;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 20px;
+    font-family: Apple Chancery;
+    font-weight: normal;    
+}
+
+.bar {
+    background-color: rgb(116, 74, 140);
+}
+
+.bio {
+    background-color: rgb(235, 217, 217);
+    margin-left: 100px;
+    margin-right: 100px;
+    padding: 15px;
+}
+
+.bio-text {
+    text-align: center;
+    float: left;
+    height: 100%;
+    width: 60%;
+    padding: 20px;
+    padding-top: 100px;
+}
+
+.jan {
+    /* float: right; */
+    height: 100%;
+    padding: 20px;
+    width: 350px;
+    padding-right: 20px;
+}
+
+.directory {
+    list-style-type: none;
+    text-align: center;
+}
+
+.directory ul li a {
+    text-decoration: none;
+}
+
+.directory { 
+    background-color: white;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
