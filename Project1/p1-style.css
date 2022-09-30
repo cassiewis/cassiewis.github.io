@@ -12,7 +12,7 @@ html {
 
 .head1 {
     background-image: url("lavender.jpg");
-    background-position: right;
+    background-position: right top;
     background-color: white;
     background-repeat: no-repeat;
     margin-left: 100px;
@@ -20,8 +20,6 @@ html {
     padding-top: 30px;
     padding-bottom: 40px;
     text-align: center;
-    
-
     color: rgb(116, 74, 140);
 }
 
@@ -33,6 +31,7 @@ h2 {
     font-size: 60px;
     font-family: Apple Chancery;
     font-weight: bold;
+    text-align: center;
 }
 
 h3 {
@@ -41,17 +40,13 @@ h3 {
     font-weight: normal;    
 }
 
-.bar {
-    background-color: rgb(116, 74, 140);
-}
-
 .section-main {
     background-color: rgb(235, 217, 217);
     margin-left: 100px;
     margin-right: 100px;
     padding: 15px;
     color: black;
-}
+    padding-top: 30px;}
 
 .bio-text {
     text-align: center;
@@ -75,15 +70,19 @@ h3 {
     list-style-type: none;
     text-align: center;  
     text-decoration: none;  
-    color: black;
+    color: rgb(116, 74, 140);
     font-size: 25px;
 }
 
 .candleTable {
     margin-left: auto;
     margin-right: auto;
+    margin-left: 30px;
+    margin-right: 30px;
 }
 
 .candle-image {
-    height: 10%;
+    max-width: 100%;  
+    height: auto;  
+    padding: 10px;    
 }
