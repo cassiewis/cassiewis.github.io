@@ -45,11 +45,12 @@ h3 {
     background-color: rgb(116, 74, 140);
 }
 
-.bio {
+.section-main {
     background-color: rgb(235, 217, 217);
     margin-left: 100px;
     margin-right: 100px;
     padding: 15px;
+    color: black;
 }
 
 .bio-text {
@@ -76,7 +77,13 @@ h3 {
     text-decoration: none;  
     color: black;
     font-size: 25px;
-
 }
 
+.candleTable {
+    margin-left: auto;
+    margin-right: auto;
+}
 
+.candle-image {
+    height: 10%;
+}
