@@ -61,7 +61,6 @@
 .intro { 
 		/* padding-bottom: 300px; */
 		padding-top: 1px;
-
 		background-color: rgb(251, 240, 242);
 		background-image: url("/Project2/images/balloons.png");
 		background-repeat: no-repeat;
@@ -110,11 +109,10 @@ header {
 	width: 580px; 
 	float: left;
 	clear: right;
-	/* padding-right: 200px; */
-
 	color: rgb(219, 148, 66);
 	padding-bottom: 250px;
 	}
+
 .summary p {
 	background-color: rgb(246, 218, 209);
 	padding: 10px;
@@ -128,6 +126,7 @@ header {
 .preamble {
 	margin-top: 400px;
 	background-color: rgba(219, 148, 66);
+	padding-bottom: 20px;
 	} 
 
 .preamble h3 {
@@ -136,85 +135,144 @@ header {
 	font-family: Microsoft Sans Serif;
 	color: rgb(246, 218, 209);
 	}
-/* 
+
+.preamble p {
+	text-align: center;
+	font-size: 18px;
+	font-family: Microsoft Sans Serif;
+	color: rgb(49, 49, 49);
+	margin-left: 50px;
+	margin-right: 50px;
+	}
+
+
+.explanation h3 {
+	font-size: 40px;
+	text-align: center;
+	font-family: Microsoft Sans Serif;
+	color: rgb(246, 218, 209);
+}
+
+.explanation p {
+	text-align: center;
+	font-size: 18px;
+	font-family: Microsoft Sans Serif;
+	color: rgb(49, 49, 49);
+	margin-left: 50px;
+	margin-right: 50px;
+}
+
+
+.participation h3 {
+	color: white;
+	font-size: 30px;
+	font-family: Microsoft Sans Serif;
+	padding-top: 120px;
+	text-align: center;
+	padding-bottom: 150px;
+}
+
+.participation p {
+	margin-left: 50px;
+	margin-right: 50px;
+	text-align: center;
+	font-size: 18px;
+	font-family: Microsoft Sans Serif;
+}
+
+.participation {
+	float:right; 
+	width: 33%;
+	height: 1000px;
+	background-image: url(images/cd.jpg);
+	background-size: 350px;
+	background-position: 50% 0%;
+	background-repeat: no-repeat;
+}
+
+.benefits h3 {
+	color: white;
+	font-size: 30px;
+	font-family: Microsoft Sans Serif;
+	padding-top: 120px;
+	text-align: center;
+	padding-bottom: 150px;
+}
+
+.benefits p {
+	margin-left: 50px;
+	margin-right: 50px;
+	text-align: center;
+	font-size: 18px;
+	font-family: Microsoft Sans Serif;
+}
+
+.benefits {
+	float: left;
+	width: 33%;
+	float:left; 
+	width: 33%;
+	height: 500px;
+	background-image: url(images/flowers.jpeg);
+	background-size: 350px;
+	background-position: 50% 0%;
+	background-repeat: no-repeat;
+}
+
+.requirements h3 {
+	color: white;
+	font-size: 30px;
+	font-family: Microsoft Sans Serif;
+	padding-top: 120px;
+	text-align: center;
+	padding-bottom: 150px;
+}
+
+.requirements p {
+	margin-left: 50px;
+	margin-right: 50px;
+	text-align: center;
+	font-size: 18px;
+	font-family: Microsoft Sans Serif;
+}
+
+.requirements {
+	float:left; 
+	width: 33%;
+	height: 1000px;
+	background-image: url(images/paint.jpg);
+	background-size: 350px;
+	background-position: 50% 0%;
+	background-repeat: no-repeat;
+}
 
 footer { 
-	text-align: center; 
-	} */
- /* footer a:link, footer a:visited { 
+	font-size: 25px;
+	font-family: Luminari, fantasy;
+} 
+
+footer a:link, footer a:visited { 
 	margin-right: 20px; 
-	} */
+	}
 
-/* .sidebar {
-	margin-left: 600px; 
-	position: absolute; 
-	top: 0; 
-	right: 0;
-	} */
-/* .sidebar .wrapper { 
-	font: 10px verdana, sans-serif; 
-	background: transparent url(http://csszengarden.com/001/paper-bg.jpg) top left repeat-y; 
-	padding: 10px; 
-	margin-top: 150px; 
-	width: 130px; 
-	} */
-/* .sidebar h3.select { 
-	background: transparent url(http://csszengarden.com/001/h3.gif) no-repeat top left; 
-	margin: 10px 0 5px 0; 
-	width: 97px; 
-	height: 16px; 
+.sidebar {
+	background-color: rgb(246, 218, 209);;
+	margin-right: 970px;
+	padding: 20px;
+	}
 
-	text-indent: 100%;
-	white-space: nowrap;
-	overflow: hidden;
-	} */
-/* .sidebar h3.archives { 
-	background: transparent url(http://csszengarden.com/001/h5.gif) no-repeat top left; 
-	margin: 25px 0 5px 0; 
-	width:57px; 
-	height: 14px; 
-
-	text-indent: 100%;
-	white-space: nowrap;
-	overflow: hidden;
-	} */
-/* .sidebar h3.resources { 
-	background: transparent url(http://csszengarden.com/001/h6.gif) no-repeat top left; 
-	margin: 25px 0 5px 0; 
-	width:63px; 
-	height: 10px; 
-
-	text-indent: 100%;
-	white-space: nowrap;
-	overflow: hidden;
-	} */
-
-
-/* .sidebar ul {
-	margin: 0;
-	padding: 0;
-	} */
-/* .sidebar li {
+.sidebar li {
 	line-height: 1.3em; 
-	background: transparent url(http://csszengarden.com/001/cr1.gif) no-repeat top center; 
 	display: block; 
-	padding-top: 5px; 
+	margin-top: -0px; 
 	margin-bottom: 5px;
 	list-style-type: none;
-	} */
-/* .sidebar li a:link {
+	}
+
+.sidebar li a:link {
 	color: #988F5E;
-	} */
-/* .sidebar li a:visited {
+	}
+
+.sidebar li a:visited {
 	color: #B3AE94;
-	} */
-
-
-/* .extra1 {
-	background: transparent url(http://csszengarden.com/001/cr2.gif) top left no-repeat; 
-	position: absolute; 
-	top: 40px; 
-	right: 0; 
-	width: 148px; 
-	height: 110px;
-	}  */
+	}
