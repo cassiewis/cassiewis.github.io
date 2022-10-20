@@ -31,7 +31,6 @@ header h2 {
 	font-size: 50px;
 	font-family: Microsoft Sans Serif;
 	color: rgb(242, 169, 172);
-
 	margin: 300px 20px 20px 750px;
 	width: 500px;
 }
@@ -113,9 +112,8 @@ header h2 {
 }
 
 .participation {
-	float:right; 
+	float: left;
 	width: 33%;
-	height: 1000px;
 	background-image: url(images/cd.jpg);
 	background-size: 350px;
 	background-position: 50% 0%;
@@ -140,11 +138,9 @@ header h2 {
 }
 
 .benefits {
-	float: left;
+	float: right;
 	width: 33%;
-	float:left; 
-	width: 33%;
-	height: 500px;
+	height: 650px;
 	background-image: url(images/flowers.jpeg);
 	background-size: 350px;
 	background-position: 50% 0%;
@@ -171,40 +167,55 @@ header h2 {
 .requirements {
 	float:left; 
 	width: 33%;
-	height: 1000px;
+	/* height: 1300px; */
 	background-image: url(images/paint.jpg);
 	background-size: 350px;
 	background-position: 50% 0%;
 	background-repeat: no-repeat;
+	margin-bottom: 100px;
 }
 
 footer { 
 	font-size: 25px;
 	font-family: Luminari, fantasy;
+	text-align: center;
+	padding: 30px;
+	background-color: rgba(219, 148, 66, 0.415);
+	position: fixed;
+	bottom: 0;
+	width: 100%;
 } 
 
 footer a:link, footer a:visited { 
 	margin-right: 20px; 
+	color: rgb(97, 28, 146);
 	}
 
 .sidebar {
-	background-color: rgb(246, 218, 209);;
-	margin-right: 970px;
-	padding: 20px;
+	text-align: right;
+	background-color: rgb(246, 218, 209);
+	margin-left: 70%;
+	margin-right: 2%;
+	padding: 40px;
+	margin-top: 600px;
 	}
 
+.sidebar h3 {
+	font-size: 20px;
+	font-family: Microsoft Sans Serif;
+	text-align: center;
+
+}
 .sidebar li {
 	line-height: 1.3em; 
-	display: block; 
-	margin-top: -0px; 
-	margin-bottom: 5px;
 	list-style-type: none;
 	}
 
 .sidebar li a:link {
-	color: #988F5E;
+	color: #da8216;
 	}
 
 .sidebar li a:visited {
-	color: #B3AE94;
+	color: #988F5E;
+
 	}
