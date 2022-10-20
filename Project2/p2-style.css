@@ -55,9 +55,10 @@ header h2 {
 	}
 
 .preamble {
-	margin-top: 400px;
+	margin-top: 450px;
 	background-color: rgba(219, 148, 66);
 	padding-bottom: 20px;
+	padding-top: 20px;
 	} 
 
 .preamble h3 {
@@ -91,6 +92,10 @@ header h2 {
 	color: rgb(49, 49, 49);
 	margin-left: 50px;
 	margin-right: 50px;
+}
+
+.explanation {
+	padding-bottom: 50px;
 }
 
 
