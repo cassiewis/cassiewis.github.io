@@ -18,6 +18,7 @@ h2 {
     position: relative;
     top: 20px;
     background: rgb(131, 113, 120);
+    box-shadow: 0 2px 0 rgb(67, 54, 59, 0.671);
     color: rgb(224, 224, 224);
     padding: 15px;
 }
@@ -32,6 +33,7 @@ h3 {
 
 .projects {
     background: rgb(224, 224, 224);
+    box-shadow: 2px 2px 0 rgba(97, 96, 96, 0.56);
     text-align: center;
     margin-right: 5%;
     margin-left: 40%;

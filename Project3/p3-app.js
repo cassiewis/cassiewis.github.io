@@ -20,11 +20,15 @@ function releaseSteves() {
     setTimeout(() => {  
       const headertitle = document.getElementById('title');
       headertitle.remove();
+
+      // document.html.style.backgroundImage = url("./art/party-back.jpeg");
+
       document.getElementById("gif-3").src = "./art/steve-3.gif";
       document.getElementById("gif-5").src = "./art/steve-5.gif";
       document.getElementById("gif-4").src = "./art/steve-4.gif";
       document.getElementById("gif-1").src = "./art/steve1.gif";
-      document.html.style.backgroundImage = "url(./art/party-back.jpeg)"
+      
+      
     }, 2000);
   }, 6300);
   
@@ -40,8 +44,9 @@ function releaseSteves() {
 function doSomething() {
 
   // get a random number
-  randomNum = Math.floor(Math.random() * 5);
+  // randomNum = Math.floor(Math.random() * 5);
 
+  randomNum = 2;
   switch(randomNum) {
     case 0:
       const donkey = new Audio("./art/donkey.mp3");
