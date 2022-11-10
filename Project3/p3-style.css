@@ -1,7 +1,57 @@
+
 html, body {
   margin: 0;
   padding: 0;
+  text-align: center; 
+  font-family: Microsoft Sans Serif;
+  padding: 10px;
+  color:rgb(0, 0, 0);
+  font-size: 70px;
 }
-canvas {
-  display: block;
+
+img {
+  margin: 10px;
 }
+
+html {
+  background-image: url(./art/background.jpg); 
+  background-size: 100%;
+}
+
+#plane {
+  width: 50px;
+  z-index: 7;
+  position: relative;
+  width: 200px;
+  left: -1000px;
+}
+
+button { 
+  cursor: pointer;
+  border-radius: 50%; 
+  width: 300px;
+  height: 300px;
+  border: none;
+  color: white;
+  font-weight: 900;
+  font-size: 40px;
+  background: red;
+  text-shadow: 0 3px 1px rgba(98, 21, 14, 0.878);
+  box-shadow: 0 25px 0 rgb(183,9,0);
+  margin-top: 8%;
+  position: fixed;
+  margin-left:45px;
+}
+
+button span { 
+  position: relative; 
+}
+
+button:active { 
+  padding-top: 3px;
+  transform: translateY(4px);
+  box-shadow: 0 4px 0 rgb(183,0,0),
+    0 8px 6px rgba(0,0,0,.45);
+}
+
+
