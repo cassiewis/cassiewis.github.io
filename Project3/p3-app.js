@@ -44,9 +44,9 @@ function releaseSteves() {
 function doSomething() {
 
   // get a random number
-  // randomNum = Math.floor(Math.random() * 5);
+  randomNum = Math.floor(Math.random() * 5);
 
-  randomNum = 2;
+  // randomNum = 2;
   switch(randomNum) {
     case 0:
       const donkey = new Audio("./art/donkey.mp3");
