@@ -8,7 +8,6 @@ function releaseSteves() {
   const button = document.getElementById('big-red-button');
   button.remove();
   document.getElementById('title').innerHTML = "SOUND UP!";
-  // title.remove();
 
   // play audio
   const audio = new Audio("./art/dance-song.wav");
@@ -16,13 +15,16 @@ function releaseSteves() {
 
   // add in steve in increments
   setTimeout(() => {  
-    document.getElementById("gif-2").src = "./art/steve-2.gif";
+    document.getElementById("gif-2-big").src = "./art/steve-2.gif";
     setTimeout(() => {  
-      const headertitle = document.getElementById('title');
-      headertitle.remove();
+      const bigSteve = document.getElementById('gif-2-big');
+      bigSteve.remove();
+      const title = document.getElementById('title');
+      title.remove();
 
       // document.html.style.backgroundImage = url("./art/party-back.jpeg");
-
+      bigSteve.remove();
+      document.getElementById("gif-2").src = "./art/steve-2.gif";
       document.getElementById("gif-3").src = "./art/steve-3.gif";
       document.getElementById("gif-5").src = "./art/steve-5.gif";
       document.getElementById("gif-4").src = "./art/steve-4.gif";
