@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/addons/p5.sound.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"></script>
+    <link rel="stylesheet" type="text/css" href="p4-style.css">
+    <meta charset="utf-8" />
+  </head>
+
+  <body>
+    <div id="header">
+      <h1>
+        HOMES FOR <br>HOUNDS
+      </h1>
+      <h2>
+        Open your home to a Dog in need of a family
+      </h2>
+
+    </div>
+
+
+
+    
+    <!-- EXTRA - select dog or cat -->
+
+    <!-- <p id="box_title">Enter your zipcode to be paired with a friend near you</p> -->
+    <input type="text" name="zip_code" id="zip_code" placeholder="zipcode">
+    <button id="next_button">Search</button>
+    
+
+    <div id="dog_info">
+      <div id="name">Name</div>
+      <div id="info_box">
+        <div id="breed">Breed</div>
+        <div id="age">age</div>
+        <div id="size">size</div>
+        <div id="gender">gender</div>
+      </div>
+      <img id="main_pic" src="data:image/jpeg;base64,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">
+
+      <div id="location"></div>
+
+      
+      <!-- <div id="contact_info">
+        <div id="phone_num">phone#</div>
+        <div id=""></div> -->
+
+
+      </div>
+      <div>
+        <a id="link" href=""></a>
+        <div id="my_id"></div>
+      </div>
+
+    </div>
+
+
+    
+    <script src="p4-app.js"></script>
+
+
+  </body>
+
+  <footer>
+    <div>
+      The API is supplied by <a id="link" href="https://www.petfinder.com/">Petfinder.com</a>. All animals on this site 
+      are real pets who are currently looking for someone to love and live with. <br><br>If you are looking for a 
+      new pet to love, search here or look on Petfinder's home page for more options.
+    </div>
+    
+  </footer>
+
+</html>
