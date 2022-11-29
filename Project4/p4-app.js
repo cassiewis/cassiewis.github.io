@@ -78,39 +78,44 @@ function displayResponse(json, i){
         // name
         document.getElementById("name").innerHTML = json.animals[i].name;
 
+        // document.getElementById("breed-title"),innerHTML = "breed";
+        // document.getElementById("gender-title"),innerHTML = "gender";
+        // document.getElementById("age-title"),innerHTML = "age";
+        // document.getElementById("size-title"),innerHTML = "size";
+        
+        
+        
         // breed
         if (json.animals[i].breeds.primary == null){
-            document.getElementById("breed").innerHTML = "BREED: Mixed - currently unknown";
+            document.getElementById("breed").innerHTML = "Mixed Breed";
         } else {
-            document.getElementById("breed").innerHTML = "BREED: "+json.animals[i].breeds.primary;
+            document.getElementById("breed").innerHTML = json.animals[i].breeds.primary;
         }
 
         // age
         if (json.animals[i].age == null){
-            document.getElementById("age").innerHTML = "AGE: unknown";
+            document.getElementById("age").innerHTML = "Age unknown";
         } else {
-            document.getElementById("age").innerHTML = "AGE: " + json.animals[i].age;
+            document.getElementById("age").innerHTML = json.animals[i].age;
         }
 
         // size
-        document.getElementById("size").innerHTML = "SIZE: " + json.animals[i].size;
+        document.getElementById("size").innerHTML = json.animals[i].size;
         
         // gender
-        document.getElementById("gender").innerHTML = "GENDER: " + json.animals[i].gender;
+        document.getElementById("gender").innerHTML = json.animals[i].gender;
 
         document.getElementById("main_pic").src = json.animals[i].photos[0].large;
 
         // LOCATION
         // if it's not null then print
-        document.getElementById("location").innerHTML = "Come find me! I'm located in " + json.animals[i].contact.address.city + ", " + json.animals[i].contact.address.state;
+        document.getElementById("find_me").innerHTML = "Come find me!";
+        document.getElementById("location").innerHTML = "I'm located in " + json.animals[i].contact.address.city + ", " + json.animals[i].contact.address.state;
 
-        // // link
-        document.getElementById("link").innerHTML = "Find me on PetFinder";
+        // link
+        document.getElementById("link").innerHTML = "You can see me HERE on PetFinder";
         document.getElementById("link").href = json.animals[i].url;
         document.getElementById("my_id").innerHTML = "My ID is: " + json.animals[i].id;
-
-
-
 
 
         // wait until button is pressed
@@ -121,46 +126,16 @@ function displayResponse(json, i){
 
 }
 
-    // name
-
-    // description
-
-    // breed
-
-    // age
-
-    // gender
-
-    // size
-
-    // location
-
-
-
-
-function get_new_dog(){
-
-    // send get request
-    // url = "https://api.petfinder.com/v2/animals?type=dog&location=98370"
-    // // store result in json object
-    // httpGet(url);
-    // displayResponse(result, 1);
-}
 
 
 /**
- * on button click Thumbs down: getNewDog
+ * on button click, get a dog from DB
  */
 var next = document.getElementById("next_button");
  next.addEventListener('click', function() { 
-    // get_new_dog();
     var zip = document.getElementById('zip_code').value;
     url = "https://api.petfinder.com/v2/animals?type=dog&location="+zip;
     httpGet(url); 
 });
 
-// var new_dog = document.getElementById("new");
-//  next.addEventListener('click', function() { 
-//     get_new_dog(); 
-// });
 

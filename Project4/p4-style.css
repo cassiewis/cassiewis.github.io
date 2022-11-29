@@ -80,27 +80,58 @@ footer {
     padding: 30px;
 }
 
-link {
-    color: white;
+#link {
+    color: rgb(97, 39, 163);
+    text-decoration: none;
 }
 
 #dog_info{
     font-family:'Red Hat Display', sans-serif;
 }
 
-#info_box {
-    background-color: rgb(236, 236, 236);
-
-}
-
 #name {
     font-family:'Red Hat Display', sans-serif;
-    font-weight: 700;;
+    font-weight: 700;
     font-size: 40px;
     padding: 15px;
     color: rgba(32, 56, 105, 0.847);
     text-shadow: 2px 2px rgba(108, 121, 130, 0.52);
 }
 
+#info_box {
+    background-color: rgb(236, 236, 236);
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 25px;
+    color: rgb(136, 136, 136);
+}
+
+/* #titles {
+    width:15%;
+    display: inline;
+    padding:7%;
+} */
+
+#size, #age, #gender, #breed {
+    width: 15%;
+    display: inline;
+    padding: 7%;
+}
+
+#find_me {
+    font-size: 26px;
+    font-weight: 700;
+}
+
+#location_box {
+    background-color:rgba(86, 107, 191, 0.181);
+    padding: 30px;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top:40px;
+    border-radius: 25px;
+}
 
 
