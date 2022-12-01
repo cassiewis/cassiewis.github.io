@@ -18,20 +18,10 @@ var SECRET = "TbBpa0ozASwK2p2ld6qGXnGcDOjn7R9D1Hed67qV";
  * Sends the get request to PetFinder and saves the response.
  * @param {*} url 
  */
-async function httpGet(url)
+async function httpGet(url, access_token)
 {
-    // get the token to use in the request
-    let key_response = await fetch("https://api.petfinder.com/v2/oauth2/token", {
-        method: 'POST',
-        body: 'grant_type=client_credentials&client_id='+KEY+'&client_secret='+SECRET,
-        headers: {
-            'Content-Type': 'application/x-www-form-urlencoded'
-        }
-    });
-    let k = await key_response.json();
-    let access_token = k.access_token;
 
-    // async function using fetch
+    // send GET request to petfinder  
     let response = await fetch(url, {
             method: 'GET',
             headers: {
@@ -41,8 +31,8 @@ async function httpGet(url)
         });
     let json = await response.json();
 
-    // if the request returns with 200 status, dipslay
-    // otherwise print error message and log the error
+    // If the request returns with 200 status, display.
+    // Otherwise print error message and log the error
     if (response.status === 200) {
         // get a random num between 1 and 5
         let random_dog_index = Math.floor(Math.random() * 5);
@@ -56,7 +46,8 @@ async function httpGet(url)
 
 /**
  * Formats the response from the request and displays relevent details
- * @param {*} response 
+ * @param {*} json the response from petfinder in the form is json
+ * @param {*} i the index of the dog in the list of dogs in json
  */
 function displayResponse(json, i){
 
@@ -66,19 +57,12 @@ function displayResponse(json, i){
         }
         document.getElementById("notes").innerHTML = "";
 
-        // change background colors
+        // change background colors of text sections
         document.getElementById("info_box").style.backgroundColor = 'rgb(236, 236, 236)';
         document.getElementById("location_box").style.backgroundColor = 'rgba(86, 107, 191, 0.181)';
 
-
         // name
         document.getElementById("name").innerHTML = json.animals[i].name;
-
-        // document.getElementById("breed-title"),innerHTML = "breed";
-        // document.getElementById("gender-title"),innerHTML = "gender";
-        // document.getElementById("age-title"),innerHTML = "age";
-        // document.getElementById("size-title"),innerHTML = "size";
-        
         
         // breed
         if (json.animals[i].breeds.primary == null){
@@ -102,8 +86,7 @@ function displayResponse(json, i){
 
         document.getElementById("main_pic").src = json.animals[i].photos[0].large;
 
-        // LOCATION
-        // if it's not null then print
+        // location
         document.getElementById("find_me").innerHTML = "Come find me!";
         document.getElementById("location").innerHTML = "I'm located in " + json.animals[i].contact.address.city + ", " + json.animals[i].contact.address.state;
 
@@ -111,32 +94,39 @@ function displayResponse(json, i){
         document.getElementById("link").innerHTML = "You can see me HERE on PetFinder";
         document.getElementById("link").href = json.animals[i].url;
         document.getElementById("my_id").innerHTML = "My ID is: " + json.animals[i].id;
+}
 
-
-        // wait until button is pressed
-        // if next or back button was pressed, change dogs
-        // if button is pressed, increase index and change 
-    // }
-
-
+/**
+ * When the page is loaded, get the api key to use in all requests
+ */
+window.onload = async function(){
+    let key_response = await fetch("https://api.petfinder.com/v2/oauth2/token", {
+        method: 'POST',
+        body: 'grant_type=client_credentials&client_id='+KEY+'&client_secret='+SECRET,
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+        }
+    });
+    let k = await key_response.json();
+    window.access_token = k.access_token;
 }
 
 
-
 /**
- * on button click, get a dog from DB
+ * On button click, get a dog from Petfinder api
  */
 var next = document.getElementById("next_button");
  next.addEventListener('click', function() { 
-    // display searching note
+    
+    // display searching note so user's know it is working in the back
     document.getElementById("notes").innerHTML = "...Please wait while we find the perfect pup for you...";
 
-    // get zipcode from textbox
+    // get uer inputted zipcode from textbox
     var zip = document.getElementById('zip_code').value;
     url = "https://api.petfinder.com/v2/animals?type=dog&location="+zip;
 
-    // call the function that send the api requests
-    httpGet(url); 
+    // call the function that sends the api request
+    httpGet(url, access_token); 
 });
 
 
