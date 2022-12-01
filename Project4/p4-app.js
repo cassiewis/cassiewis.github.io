@@ -10,7 +10,7 @@
 
 // -------------------------------------------------------------------------------------------------//
 
-var ACCESS_TOKEN = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJsQXJaOU9vUXZiVzVJTXA4MFhoOHZxVUd5ZjJhOUdFTlZWcGhPVXpBaGxqNnhMbWQyRSIsImp0aSI6IjVkMGUzZjJiNzI4MTA2OWY1MzY3ZTIzYmRkZjBjNDVhYjEwNWYwYzM1NDkzN2MyYWQyYjhiMGVhNjA5NTQ1ZThmNWZmNGYxODI5NTIxYTc2IiwiaWF0IjoxNjY5NzEyMDM4LCJuYmYiOjE2Njk3MTIwMzgsImV4cCI6MTY2OTcxNTYzOCwic3ViIjoiIiwic2NvcGVzIjpbXX0.uo3pUP5_JW8DNkyi-3fXsLX_waLtJihHwPjWCJV8U8ULuCAlpCWk49fil5Lqi0gp1E8oQa4OGaK1MjRdPqHVLMjCDkVuPiFxRG7h4VFNJLiIxkcamsExlVd--TQ8bdayB7LJvcsBcBiRVXrhUTwt49JUsukmx5Fs5pwPE3NH_t6gfuNX4xHI_gPVYFV775naOu6-vfXx-IpYBwsa966gVd0XrVeuklfXDx9qFralYquy8at8S7_7bBnPIqFrKJWsG5iWgcPGcxQ29VBV4o5-nLXF8D980uHw28YfFK8BaMmiG5z_VM2us6W6VACwf2cBEqQUgGz5BibZUmZfrTcGcg';
+// var ACCESS_TOKEN = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJsQXJaOU9vUXZiVzVJTXA4MFhoOHZxVUd5ZjJhOUdFTlZWcGhPVXpBaGxqNnhMbWQyRSIsImp0aSI6IjVkMGUzZjJiNzI4MTA2OWY1MzY3ZTIzYmRkZjBjNDVhYjEwNWYwYzM1NDkzN2MyYWQyYjhiMGVhNjA5NTQ1ZThmNWZmNGYxODI5NTIxYTc2IiwiaWF0IjoxNjY5NzEyMDM4LCJuYmYiOjE2Njk3MTIwMzgsImV4cCI6MTY2OTcxNTYzOCwic3ViIjoiIiwic2NvcGVzIjpbXX0.uo3pUP5_JW8DNkyi-3fXsLX_waLtJihHwPjWCJV8U8ULuCAlpCWk49fil5Lqi0gp1E8oQa4OGaK1MjRdPqHVLMjCDkVuPiFxRG7h4VFNJLiIxkcamsExlVd--TQ8bdayB7LJvcsBcBiRVXrhUTwt49JUsukmx5Fs5pwPE3NH_t6gfuNX4xHI_gPVYFV775naOu6-vfXx-IpYBwsa966gVd0XrVeuklfXDx9qFralYquy8at8S7_7bBnPIqFrKJWsG5iWgcPGcxQ29VBV4o5-nLXF8D980uHw28YfFK8BaMmiG5z_VM2us6W6VACwf2cBEqQUgGz5BibZUmZfrTcGcg';
 var KEY = "lArZ9OoQvbW5IMp80Xh8vqUGyf2a9GENVVphOUzAhlj6xLmd2E";
 var SECRET = "TbBpa0ozASwK2p2ld6qGXnGcDOjn7R9D1Hed67qV";
 
@@ -20,48 +20,37 @@ var SECRET = "TbBpa0ozASwK2p2ld6qGXnGcDOjn7R9D1Hed67qV";
  */
 async function httpGet(url)
 {
-    // let key_full = await fetch("https://api.petfinder.com/v2/oauth2/token", {
-    //     method: 'GET',
-    //     headers: {
-    //         grant_type: 'client_credentials',
-    //         client_id: KEY,
-    //         client_secret: SECRET,
-    //         'Content-Type': 'application/json'
-    //     }
-    // });
-    // let key = await key_full.text();
-    // let key_value = key.access_token;
-    // console.log(key);
+    // get the token to use in the request
+    let key_response = await fetch("https://api.petfinder.com/v2/oauth2/token", {
+        method: 'POST',
+        body: 'grant_type=client_credentials&client_id='+KEY+'&client_secret='+SECRET,
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+        }
+    });
+    let k = await key_response.json();
+    let access_token = k.access_token;
 
-    // document.getElementById("dog_info").innerhtml = key;
-
-    // curl -d "grant_type=client_credentials&client_id=lArZ9OoQvbW5IMp80Xh8vqUGyf2a9GENVVphOUzAhlj6xLmd2E&client_secret=TbBpa0ozASwK2p2ld6qGXnGcDOjn7R9D1Hed67qV" https://api.petfinder.com/v2/oauth2/token
-
-    // var json = {};
     // async function using fetch
     let response = await fetch(url, {
             method: 'GET',
             headers: {
-                'Authorization': "Bearer ".concat(ACCESS_TOKEN),
+                'Authorization': "Bearer ".concat(access_token),
                 'Content-Type': 'application/json'
             }
         });
-
     let json = await response.json();
 
-    // if (json.status === 200) {
-    //     displayResponse(json);
-    // } else {
-    //     document.getElementById("dog_div").innerHTML = "Data not avaliable. Please try again later.";
-    // }
-    // document.getElementById("dog_info").innerHTML = json;
-
-    // begins on 1 because sometimes the first index (0) is being inputted
-    // and not all necessary infornmation has been entered
-    // return json;
-    displayResponse(json, 1);
-    // return;
-    // return json;
+    // if the request returns with 200 status, dipslay
+    // otherwise print error message and log the error
+    if (response.status === 200) {
+        // get a random num between 1 and 5
+        let random_dog_index = Math.floor(Math.random() * 5);
+        displayResponse(json, random_dog_index);
+    } else {
+        document.getElementById("notes").innerHTML = "Data not avaliable. Please try again later.";
+        console.log(response.text());
+    }
 }
 
 
@@ -75,6 +64,13 @@ function displayResponse(json, i){
         if (json.animals[i].name == null || json.animals[i].gender == null || json.animals[i].photos[0].large == null){
             displayResponse(json, i++);
         }
+        document.getElementById("notes").innerHTML = "";
+
+        // change background colors
+        document.getElementById("info_box").style.backgroundColor = 'rgb(236, 236, 236)';
+        document.getElementById("location_box").style.backgroundColor = 'rgba(86, 107, 191, 0.181)';
+
+
         // name
         document.getElementById("name").innerHTML = json.animals[i].name;
 
@@ -84,26 +80,25 @@ function displayResponse(json, i){
         // document.getElementById("size-title"),innerHTML = "size";
         
         
-        
         // breed
         if (json.animals[i].breeds.primary == null){
             document.getElementById("breed").innerHTML = "Mixed Breed";
         } else {
-            document.getElementById("breed").innerHTML = json.animals[i].breeds.primary;
+            document.getElementById("breed").innerHTML = "BREED:<br>" + json.animals[i].breeds.primary;
         }
 
         // age
         if (json.animals[i].age == null){
             document.getElementById("age").innerHTML = "Age unknown";
         } else {
-            document.getElementById("age").innerHTML = json.animals[i].age;
+            document.getElementById("age").innerHTML = "AGE:<br>" + json.animals[i].age;
         }
 
         // size
-        document.getElementById("size").innerHTML = json.animals[i].size;
+        document.getElementById("size").innerHTML = "SIZE:<br>" + json.animals[i].size;
         
         // gender
-        document.getElementById("gender").innerHTML = json.animals[i].gender;
+        document.getElementById("gender").innerHTML = "GENDER:<br>" + json.animals[i].gender;
 
         document.getElementById("main_pic").src = json.animals[i].photos[0].large;
 
@@ -133,8 +128,14 @@ function displayResponse(json, i){
  */
 var next = document.getElementById("next_button");
  next.addEventListener('click', function() { 
+    // display searching note
+    document.getElementById("notes").innerHTML = "...Please wait while we find the perfect pup for you...";
+
+    // get zipcode from textbox
     var zip = document.getElementById('zip_code').value;
     url = "https://api.petfinder.com/v2/animals?type=dog&location="+zip;
+
+    // call the function that send the api requests
     httpGet(url); 
 });
 

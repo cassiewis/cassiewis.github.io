@@ -19,7 +19,7 @@ body {
 
 h1 {
     font-family: 'Rocher';
-    font-size: 80px;
+    font-size: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -31,13 +31,16 @@ h2 {
     font-family:'Red Hat Display', sans-serif;
     color: rgba(14, 31, 14, 0.696);
     text-shadow: 2px 2px rgba(125, 161, 125, 0.846);
-    font-size: 28px;
+    font-size: 32px;
 }
 
 #zip_code {
-    width: 250px;
+    width: 300px;
+    height: 60px;
+    font-size: 18px;
     padding: 12px 20px;
     margin: 15px;
+    margin-top: 40px;
     box-sizing: border-box;
     background-image: url('searchicon.png');
 }
@@ -57,8 +60,9 @@ h2 {
   box-shadow: #422800 4px 4px 0 0;
   cursor: pointer;
   font-weight: 600;
-  font-size: 15px;
-  padding: 0 15px;
+  height: 60px;
+  font-size: 22px;
+  padding: 0 25px;
   line-height: 40px;
 }
 
@@ -89,6 +93,12 @@ footer {
     font-family:'Red Hat Display', sans-serif;
 }
 
+#notes {
+    font-family:'Red Hat Display', sans-serif;
+    color: rgba(32, 56, 105, 0.847);
+    font-size: 22px;
+}
+
 #name {
     font-family:'Red Hat Display', sans-serif;
     font-weight: 700;
@@ -99,25 +109,27 @@ footer {
 }
 
 #info_box {
-    background-color: rgb(236, 236, 236);
+    /* background-color: rgb(236, 236, 236); */
+    font-size: 20px;
     margin-left: 10%;
     margin-right: 10%;
     padding: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 80px;
     border-radius: 25px;
     color: rgb(136, 136, 136);
+    height: 40px;  
 }
 
-/* #titles {
-    width:15%;
-    display: inline;
-    padding:7%;
-} */
 
-#size, #age, #gender, #breed {
-    width: 15%;
-    display: inline;
-    padding: 7%;
+#size, #age {
+    float: left;
+	width: 25%;
+}
+
+#gender, #breed {
+    float: right;
+	width: 25%;  
+
 }
 
 #find_me {
@@ -126,7 +138,7 @@ footer {
 }
 
 #location_box {
-    background-color:rgba(86, 107, 191, 0.181);
+    /* background-color:rgba(86, 107, 191, 0.181); */
     padding: 30px;
     margin-left: 25%;
     margin-right: 25%;
