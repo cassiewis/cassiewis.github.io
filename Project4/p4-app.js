@@ -1,16 +1,11 @@
+/**
+ * author: Cassandra Wischhoefer
+ * 
+ * Homes for Hounds is a webpage where you can be paired with an adoptable dog
+ * within close proximity to your entered zipcode.
+ */
 
-// scroll through dogs in your area
 
-// API key = lArZ9OoQvbW5IMp80Xh8vqUGyf2a9GENVVphOUzAhlj6xLmd2E
-// secret = TbBpa0ozASwK2p2ld6qGXnGcDOjn7R9D1Hed67qV
-
-// Response:
-//{"token_type":"Bearer","expires_in":3600,
-//"access_token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJsQXJaOU9vUXZiVzVJTXA4MFhoOHZxVUd5ZjJhOUdFTlZWcGhPVXpBaGxqNnhMbWQyRSIsImp0aSI6ImEzODQxN2FhMjQ4NmIxZDhjNDMxMjU5NDE2ODk4ZmZiOWU2OGE2M2M0N2RiMDFlNzQyYWYwMTMyOTJmMDdlZmU2YzFjNWZiZTRkYmFlZDQyIiwiaWF0IjoxNjY4OTg4MDA5LCJuYmYiOjE2Njg5ODgwMDksImV4cCI6MTY2ODk5MTYwOSwic3ViIjoiIiwic2NvcGVzIjpbXX0.gRg6eDvUaqqGAGrLzinV3YwTl8SB6MDQYcOLrOoiLNU1mF7sKeq6hu5V_rgV1zQZO6gsnkckpk-wk9Bhv6c_9OEFTYbtn5HikWPcfx95AiSDS1OOfWQaGwZzGE3AzTISJDskjCibm5dgUbpATwcAN17NbOg3bck3qFXKVsfgfw_nB1kSpduiSxI_3lEOhI7AlJmfATwYpo57a7zGldazxWN9VoRIgNvcPjBi9ovEke-5vzDjWRZip0kZ3YrL2GtDeYLqZCBXCYrJEU1AsMjjiQ8KWg2EbslKoFrZFm63rSHaxsLc3tOPdBSoxhEizkVKGH1TN9G2OCBMIcFzJiAYsA"}%  
-
-// -------------------------------------------------------------------------------------------------//
-
-// var ACCESS_TOKEN = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJsQXJaOU9vUXZiVzVJTXA4MFhoOHZxVUd5ZjJhOUdFTlZWcGhPVXpBaGxqNnhMbWQyRSIsImp0aSI6IjVkMGUzZjJiNzI4MTA2OWY1MzY3ZTIzYmRkZjBjNDVhYjEwNWYwYzM1NDkzN2MyYWQyYjhiMGVhNjA5NTQ1ZThmNWZmNGYxODI5NTIxYTc2IiwiaWF0IjoxNjY5NzEyMDM4LCJuYmYiOjE2Njk3MTIwMzgsImV4cCI6MTY2OTcxNTYzOCwic3ViIjoiIiwic2NvcGVzIjpbXX0.uo3pUP5_JW8DNkyi-3fXsLX_waLtJihHwPjWCJV8U8ULuCAlpCWk49fil5Lqi0gp1E8oQa4OGaK1MjRdPqHVLMjCDkVuPiFxRG7h4VFNJLiIxkcamsExlVd--TQ8bdayB7LJvcsBcBiRVXrhUTwt49JUsukmx5Fs5pwPE3NH_t6gfuNX4xHI_gPVYFV775naOu6-vfXx-IpYBwsa966gVd0XrVeuklfXDx9qFralYquy8at8S7_7bBnPIqFrKJWsG5iWgcPGcxQ29VBV4o5-nLXF8D980uHw28YfFK8BaMmiG5z_VM2us6W6VACwf2cBEqQUgGz5BibZUmZfrTcGcg';
 var KEY = "lArZ9OoQvbW5IMp80Xh8vqUGyf2a9GENVVphOUzAhlj6xLmd2E";
 var SECRET = "TbBpa0ozASwK2p2ld6qGXnGcDOjn7R9D1Hed67qV";
 
@@ -116,8 +111,12 @@ window.onload = async function(){
  * On button click, get a dog from Petfinder api
  */
 var next = document.getElementById("next_button");
- next.addEventListener('click', function() { 
+next.addEventListener('click', function() { 
     
+    // todo get this to work
+    // this only runs when the form is validated with correct input from Parsley
+    // if ($('#form').isValid()){
+
     // display searching note so user's know it is working in the back
     document.getElementById("notes").innerHTML = "...Please wait while we find the perfect pup for you...";
 
@@ -127,6 +126,8 @@ var next = document.getElementById("next_button");
 
     // call the function that sends the api request
     httpGet(url, access_token); 
+
+    // }
 });
 
 
