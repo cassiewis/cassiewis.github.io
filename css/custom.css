@@ -288,7 +288,7 @@ header .navbar.sticky-header{
     top: 0px;
     left: 0;
     width: 100%;
-    background: url(../images/header-bg.jpg) no-repeat top center;
+    background: url(../images/header-bg.jpeg) no-repeat top center;
     background-size: cover;
     padding: 220px 0 120px;
 }
@@ -340,6 +340,11 @@ header .navbar.sticky-header{
 
 .about-us{
 	padding: 100px 0;
+	background: #151515;
+}
+
+.about-us p{
+	font-size: 20px;
 }
 
 .section-title{
@@ -453,76 +458,6 @@ header .navbar.sticky-header{
 	left: 0;
 }
 
-/**************************************/
-/*****     Services Section css    ****/
-/**************************************/
-
-.services{
-	padding: 100px 0 70px;
-	background: #151515;
-	position: relative;
-}
-
-.service-single{
-	background: #222;
-	padding: 40px 30px;
-	text-align: center;
-	border: 1px solid #333;
-	margin-bottom: 30px;
-	position: relative;
-}
-
-.service-single:before{
-	content: '';
-	display: block;
-	position: absolute;
-	top: -1px;
-	left: -1px;
-	right: -1px;
-	bottom: -1px;
-	border-top: 1px solid #ff5d56;
-	border-bottom: 1px solid #ff5d56;
-	transform: scale(0,1);
-	transition: all 0.6s;
-}
-
-.service-single:after{
-	content: '';
-	display: block;
-	position: absolute;
-	top: -1px;
-	left: -1px;
-	right: -1px;
-	bottom: -1px;
-	border-left: 1px solid #ff5d56;
-	border-right: 1px solid #ff5d56;
-	transform: scale(1,0);
-	transition: all 0.6s;
-}
-
-.service-single:hover:before,
-.service-single:hover:after{
-	transform: scale(1);
-}
-
-.service-single .icon-box{
-	color: #ff5d56;
-	font-size: 60px;
-	line-height: 1em;
-	margin-bottom: 26px;
-}
-
-.service-single h3{
-	font-size: 20px;
-	font-weight: 400;
-	color: #fff;
-	margin-bottom: 16px;
-}
-
-.service-single p{
-	margin-bottom: 0;
-}
-
 /***************************************/
 /*****     My Resume Section css    ****/
 /***************************************/
@@ -540,6 +475,7 @@ header .navbar.sticky-header{
 	padding: 14px 20px;
 	text-transform: uppercase;
 	margin-bottom: 50px;
+	/* align-self: center; */
 }
 
 .sub-title i{
@@ -602,6 +538,14 @@ header .navbar.sticky-header{
 .education-pagination .swiper-pagination-bullet-active,
 .experience-pagination .swiper-pagination-bullet-active{
 	border-color: #ff5d56;
+}
+
+/***************************************/
+/*****     Skills Section css    ****/
+/***************************************/
+
+.my-skills{
+	padding: 100px 0;
 }
 
 .skill-single{
@@ -724,8 +668,19 @@ header .navbar.sticky-header{
 
 .single-portfolio-overlay h3{
 	font-weight: 400;
-	font-size: 16px;
+	font-size: 18px;
 	color: #ff5d56;
+	opacity: 0;
+	transition: all 0.8s;
+}
+
+.single-portfolio-overlay h4{
+	color: #fff;
+	font-weight: 200;
+	font-size: 16px;
+	position: absolute;
+	margin-bottom: 30px;
+  	bottom: 0;
 	opacity: 0;
 	transition: all 0.8s;
 }
@@ -740,6 +695,10 @@ header .navbar.sticky-header{
 }
 
 .single-portfolio:hover .single-portfolio-overlay h3{
+	opacity: 1;
+}
+
+.single-portfolio:hover .single-portfolio-overlay h4{
 	opacity: 1;
 }
 
@@ -760,6 +719,18 @@ header .navbar.sticky-header{
 	grid-gap: 8px;
 	grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   }
+
+  .image-2 {
+	display: grid;
+	grid-gap: 8px;
+	grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
+  }
+
+.image-3 {
+	display: grid;
+	grid-gap: 8px;
+	grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+}
   
 .image img {
 	width: 100%;
@@ -812,219 +783,13 @@ header .navbar.sticky-header{
 	color: #707070;
 }
 
-
-/***************************************/
-/*****     Our Team Section css     ****/
-/***************************************/
-
-.our-team{
-	padding: 100px 0;
-}
-
-.team-single{
-	position: relative;
-	margin-bottom: 35px;
-}
-
-.team-single figure img{
-	filter: grayscale(100%);
-}
-
-.team-info{
-	position: absolute;
-	background: #222;
-	border: 1px solid #333;
-	left: 30px;
-	right: 30px;
-	bottom: -35px;
-	padding: 14px 20px;
-	text-align: center;
-}
-
-.team-info:before{
-	content: '';
-    display: block;
-    position: absolute;
-    top: -1px;
-    left: -1px;
-    right: -1px;
-    bottom: -1px;
-    border-top: 1px solid #ff5d56;
-    border-bottom: 1px solid #ff5d56;
-    transform: scale(0,1);
-    transition: all 0.6s;
-}
-
-.team-info:after{
-	content: '';
-    display: block;
-    position: absolute;
-    top: -1px;
-    left: -1px;
-    right: -1px;
-    bottom: -1px;
-    border-left: 1px solid #ff5d56;
-    border-right: 1px solid #ff5d56;
-    transform: scale(1,0);
-    transition: all 0.6s;
-}
-
-.team-info h3{
-	color: #fff;
-	font-size: 18px;
-	font-weight: 400;
-	margin-bottom: 2px;
-}
-
-.team-info p{
-	font-size: 14px;
-	margin: 0;
-}
-
-.team-single:hover .team-info:before,
-.team-single:hover .team-info:after{
-	transform: scale(1);
-}
-
-/***************************************/
-/*****      Pricing Section css     ****/
-/***************************************/
-
-.pricing{
-	padding: 100px 0;
-	background: #151515;
-}
-
-.pricing-single{
-	text-align: center;
-	background: #222;
-	border: 1px solid #333;
-	position: relative;
-}
-
-.pricing-single:before{
-	content: '';
-    display: block;
-    position: absolute;
-    top: -1px;
-    left: -1px;
-    right: -1px;
-    bottom: -1px;
-    border-top: 1px solid #ff5d56;
-    border-bottom: 1px solid #ff5d56;
-    transform: scale(0,1);
-    transition: all 0.6s;
-}
-
-.pricing-single:after{
-	content: '';
-    display: block;
-    position: absolute;
-    top: -1px;
-    left: -1px;
-    right: -1px;
-    bottom: -1px;
-    border-left: 1px solid #ff5d56;
-    border-right: 1px solid #ff5d56;
-    transform: scale(1,0);
-    transition: all 0.6s;
-}
-
-.pricing-header{
-	padding: 30px 20px 10px;
-	border-bottom: 1px solid #333;
-	position: relative;
-	overflow: hidden;
-}
-
-.pricing-header .icon-box{
-	font-size: 40px;
-	color: #ff5d56;
-    line-height: 1em;
-	margin-bottom: 10px;
-}
-
-.pricing-header h3{
-	color: #fff;
-	font-size: 22px;
-	font-weight: 400;
-	margin: 0;
-}
-
-.pricing-header p{
-	margin: 0;
-	font-size: 40px;
-	font-weight: 700;
-	color: #fff;
-}
-
-.pricing-header p span{
-	font-size: 18px;
-	font-weight: 300;
-	color: #707070;
-}
-
-.pricing-body{
-	padding: 30px;
-}
-
-.pricing-body ul{
-	padding: 0;
-	margin: 0;
-	list-style: none;
-}
-
-.pricing-body ul li{
-	padding: 10px 0;
-	border-bottom: 1px solid #282828;
-}
-
-.pricing-body ul li:last-child{
-	border: none;
-}
-
-.pricing-footer{
-	margin-bottom: 30px;
-	position: relative;
-	z-index: 1;
-}
-
-.btn-buynow{
-	display: inline-block;
-	border: 1px solid #ff5d56;
-	color: #ff5d56;
-	padding: 10px 30px;
-	transition: all 0.4s;
-}
-
-.btn-buynow:hover{
-	background: #ff5d56;
-	color: #fff;
-}
-
-.pricing-single:hover:before,
-.pricing-single:hover:after{
-	transform: scale(1);
-}
-
-.recommanded{
-	position: absolute;
-    left: -30px;
-    top: 16px;
-    background: #ff5d56;
-    width: 130px;
-    color: #fff;
-    padding: 6px;
-    font-size: 14px;
-    transform: rotate(-45deg);
-}
-
 /*******************************************/
-/*****      Testimonial Section css     ****/
+/*****      Resume Section css     ****/
 /*******************************************/
 
 .testimonials{
 	padding: 100px 0;
+	background-color: #151515;
 }
 
 .testimonial-single{
@@ -1114,201 +879,6 @@ header .navbar.sticky-header{
 	background: #ff5d56;
 }
 
-/*******************************************/
-/*****      Newsletter Section css      ****/
-/*******************************************/
-
-.newsletter{
-	background: #151515;
-	padding: 80px 0;
-}
-
-.newsletter-content{
-	text-align: center;
-	margin-bottom: 40px;
-}
-
-.newsletter-content h3{
-    font-family: 'Berkshire Swash', cursive;
-	font-weight: normal;
-	color: #ff5d56;	
-}
-
-.newsletter-content p{
-	font-size: 18px;	
-}
-
-.newsletter-form{
-	text-align: center;
-}
-
-.newsletter-form .form-inline{
-	max-width: 568px;
-	background: #222;
-	padding: 10px;
-	margin: 0 auto;
-	border-radius: 50px;
-	border: 1px solid #333;
-}
-
-.newsletter-form .form-group{
-	width: 100%;
-}
-
-.newsletter-form .form-control{
-	width: 80%;
-	background: none;
-	border: none;
-	font-family: inherit;
-	font-size: 20px;
-	height: 60px;
-	padding: 0 30px;
-	box-shadow: none;
-	outline: 0;
-	color: #707070;
-}
-
-.newsletter-form .btn-subscribe{
-	width: 20%;
-	background: none;
-	border: none;
-	color: #ff5d56;
-	font-size: 40px;
-	text-align: right;
-	padding: 0 30px;
-	cursor: pointer;
-}
-
-.newsletter-form .btn-subscribe:hover,
-.newsletter-form .btn-subscribe:focus{
-	box-shadow: none;
-	outline: 0;
-}
-
-/*******************************************/
-/*****      Latest Blog Section css     ****/
-/*******************************************/
-
-.latest-blog{
-	padding: 100px 0;
-}
-
-.blog-single{
-	background: #222;
-	border: 1px solid #333;
-}
-
-.blog-header{
-	position: relative;
-}
-
-.blog-header-overlay{
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background: rgba(0,0,0,0.5);
-	text-align: center;
-	transform: scale(0.8);
-	opacity: 0;
-	transition: all 0.6s;
-}
-
-.blog-single:hover .blog-header-overlay{
-	opacity: 1;
-	transform: scale(1);
-}
-
-.blog-header-overlay a{
-	display: block;
-	width: 50px;
-	height: 50px;
-	background: #ff5d56;
-	border: 1px solid #ff5d56;
-	font-size: 20px;
-	color: #fff;
-	line-height: 50px;
-	border-radius: 50%;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	margin-top: -25px;
-	margin-left: -25px;
-	transition: all 0.5s;
-}
-
-.blog-header-overlay a:hover{
-	background: none;
-	color: #ff5d56;
-}
-
-.blog-header figure{
-	margin: 0;
-}
-
-.blog-header figure img{
-	filter: grayscale(100%);
-}
-
-.blog-single .blog-body{
-	padding: 30px 20px;
-}
-
-.blog-single .blog-body h2{
-	font-size: 20px;
-	color: #fff;
-	font-weight: 400;
-	margin-bottom: 14px;
-}
-
-.blog-single .blog-body p{
-	margin: 0;
-	line-height: 1.6em;
-}
-
-.blog-footer{
-	padding: 20px;
-	border-top: 1px solid #333;
-}
-
-.blog-footer ul{
-	padding: 0;
-	margin: 0;
-	list-style: none;
-}
-
-.blog-footer ul li{
-	display: inline-block;
-	margin-right: 10px;
-}
-
-.blog-footer ul li i{
-	color: #ff5d56;
-	margin-right: 6px;
-}
-
-/************************************/
-/*****      Brand Slider css     ****/
-/************************************/
-
-.brand-sponser{
-	padding: 60px 0;
-	background: #151515;
-}
-
-.brand-slide{
-	text-align: center;
-}
-
-.brand-slide img{
-	opacity: 0.4;
-	transition: all 0.4s;
-}
-
-.brand-slide:hover img{
-	opacity: 1;
-}
 
 /************************************/
 /*****       Contact us css      ****/
@@ -1353,7 +923,10 @@ header .navbar.sticky-header{
 /*****************************************/
 
 .contact-information{
-	background: linear-gradient(#111111 50%,#151515 50%);
+	padding: 100px 0;
+	background: #111111;
+	
+	
 }
 
 .contact-info-single{
@@ -1432,7 +1005,7 @@ header .navbar.sticky-header{
 
 .main-footer{
 	padding: 100px 0;
-	background: #151515;
+	background: #111111;
 }
 
 .footer-logo{
@@ -1552,17 +1125,12 @@ header .navbar.sticky-header{
 	.about-us,
 	.portfolio,
 	.testimonials,
-	.newsletter,
 	.contactus,
 	.main-footer{
 		padding: 60px 0;
 	}
 	
-	.services,
-	.my-resume,
-	.our-team,
-	.pricing,
-	.latest-blog{
+	.my-resume{
 		padding: 60px 0 30px;
 	}
 	
@@ -1589,20 +1157,8 @@ header .navbar.sticky-header{
 		font-size: 14px;
 	}
 	
-	.newsletter-content h3{
-		font-size: 22px;
-	}
-	
-	.newsletter-content p{
-		font-size: 16px;
-	}
-	
 	.about-image{
 		margin-bottom: 50px;
-	}
-	
-	.team-single{
-		margin-bottom: 65px;
 	}
 	
 	.contact-info-single{
@@ -1636,12 +1192,13 @@ header .navbar.sticky-header{
 		font-size: 22px;
 	}
 	
-	.service-single .icon-box{
-		font-size: 40px;
-	}
-	
 	.experience{
 		margin-bottom: 50px;
+	}
+
+	.skill {
+		padding: 100px 0;
+		background: #111111;
 	}
 	
 	.skill-list{
@@ -1649,7 +1206,7 @@ header .navbar.sticky-header{
 	}
 
 	.skill-content{
-		margin-bottom: 20px;
+		margin-bottom: 20px;		
 	}
 	
 	.experience-single{
@@ -1663,44 +1220,7 @@ header .navbar.sticky-header{
 	.experience-single h4{
 		font-size: 16px;
 	}
-	
-	.pricing-single{
-		margin-bottom: 30px;
-	}
-	
-	.newsletter-form .form-group{
-		margin: 0;
-	}
-	
-	.newsletter-form .form-inline{
-		padding: 0;
-		border-radius: 0;
-	}
-	
-	.newsletter-form .form-control{
-		float: left;
-		font-size: 16px;
-		padding: 0 16px;
-	}
-	
-	.newsletter-form .btn-subscribe{
-		float: right;
-		padding: 0;
-		padding-top: 8px;
-		text-align: center;
-		font-size: 30px;
-	}
-	
-	.blog-single{
-		margin-bottom: 30px;
-	}
-	
-	.footer-social a{
-		width: 40px;
-		height: 40px;
-		line-height: 40px;
-		font-size: 20px;
-	}
+
 }
 
 @media only screen and (max-width: 575px){
@@ -1717,9 +1237,6 @@ header .navbar.sticky-header{
 		font-size: 14px;
 	}
 	
-	.pricing-body{
-		padding: 30px 20px;
-	}
 	
 	.testimonial-header h3{
 		font-size: 20px;
