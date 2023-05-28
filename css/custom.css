@@ -382,6 +382,8 @@ header .navbar.sticky-header{
 	position: relative;
 	margin-right: 10px;
 	margin-bottom: 10px;
+	border: 1px solid #222;
+
 }
 
 .about-image:after{
@@ -548,22 +550,33 @@ header .navbar.sticky-header{
 	padding: 100px 0;
 }
 
-.skill-single{
-	margin-bottom: 30px;
-}
+.skill-single {
+	text-align: center;
+	line-height:3em;
+  }
 
-.skill-single h5{
-	font-size: 18px;
-	color: #fff;
-	font-weight: 400;
-	margin-bottom: 4px;
-	letter-spacing: 0.04em;
-}
-
-.skill-ratting{
+  .skill-single li {
 	font-size: 20px;
-	color: #ff5d56;
-}
+  }
+
+  .skill-list{
+	background: #222;
+	margin-top: -100px;
+	min-height:500px;
+	padding-top: 300px;
+	top:-40px;
+	padding-top: 50px;
+  }
+
+  .skill-single .sub-title {
+	position: relative;
+	top: -30px;
+  }
+
+  .skill-single ul {
+	list-style-type: none;
+	padding: 0;
+  }
 
 .counter-single{
 	background: #222;
@@ -609,22 +622,22 @@ header .navbar.sticky-header{
 	padding: 100px 0;
 }
 
-.portfolio-nav{
+/* .portfolio-nav{
 	text-align: center;
 	margin-bottom: 50px;
-}
+} */
 
-.portfolio-nav ul{
+/* .portfolio-nav ul{
 	padding: 0;
 	margin: 0;
 	list-style: none;
-}
+} */
 
-.portfolio-nav ul li{
+/* .portfolio-nav ul li{
 	display: inline-block;
-}
+} */
 
-.portfolio-nav ul li a{
+/* .portfolio-nav ul li a{
 	display: block;
 	background: #222;
 	color: #707070;
@@ -632,18 +645,17 @@ header .navbar.sticky-header{
 	border: 1px solid #333;
 	margin: 0 4px;
 	transition: all 0.4s;
-}
+} */
 
-.portfolio-nav ul li a.active-portfolio{
+/* .portfolio-nav ul li a.active-portfolio{
 	background: #ff5d56;
 	color: #fff;
 	border-color: #ff5d56;
-}
+} */
 
 .single-portfolio{
 	position: relative;
 	margin-bottom: 30px;
-	/* width: 33%;	 */
 }
 
 .single-portfolio-overlay{
@@ -997,6 +1009,8 @@ header .navbar.sticky-header{
 	margin: 0;
 	position: relative;
 	z-index: 1;
+	text-decoration: none;
+	color: #707070;
 }
 
 /****************************************/
@@ -1199,14 +1213,6 @@ header .navbar.sticky-header{
 	.skill {
 		padding: 100px 0;
 		background: #111111;
-	}
-	
-	.skill-list{
-		text-align: center;
-	}
-
-	.skill-content{
-		margin-bottom: 20px;		
 	}
 	
 	.experience-single{
