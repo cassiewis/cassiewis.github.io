@@ -81,7 +81,7 @@ a:focus{
     width: 30px;
     height: 30px;
     border-radius: 2px;
-    background: #CCCCFF;
+    background: #ff5d56;
     -webkit-transform: translateY(0) rotate(45deg) scale(0);
     transform: translateY(0) rotate(45deg) scale(0);
     -webkit-animation: diamonds 1500ms linear infinite;
@@ -182,7 +182,7 @@ header .navbar{
 }
 
 .navbar-brand h1 span{
-	color: #CCCCFF;
+	color: #ff5d56;
 }
 
 header .navbar-collapse.collapse{
@@ -209,7 +209,7 @@ header .navbar-collapse.collapse{
 
 .navbar .navbar-nav .nav-link.active{
 	background: none;
-	color: #CCCCFF;
+	color: #ff5d56;
 }
 
 .navbar .navbar-nav .nav-link:hover,
@@ -219,7 +219,7 @@ header .navbar-collapse.collapse{
 
 .navbar .navbar-nav .nav-link.active:hover,
 .navbar .navbar-nav .nav-link.active:focus{
-	color: #CCCCFF;
+	color: #ff5d56;
 }
 
 header .navbar.sticky-header{
@@ -276,7 +276,7 @@ header .navbar.sticky-header{
 
 .slicknav_nav a:hover{
 	background: none;
-	color: #CCCCFF;
+	color: #ff5d56;
 }
 
 /************************************/
@@ -330,8 +330,8 @@ header .navbar.sticky-header{
 }
 
 .btn-download:hover{
-	border-color: #CCCCFF;
-	color: #CCCCFF;
+	border-color: #ff5d56;
+	color: #ff5d56;
 }
 
 /**************************************/
@@ -363,11 +363,11 @@ header .navbar.sticky-header{
 	position: absolute;
 	bottom: 0;
 	left: 50%;
-	border-bottom: 10px dotted #CCCCFF;
+	border-bottom: 10px dotted #b4bafc;
 }
 
 .section-title h2{
-	color: #CCCCFF;
+	color: #b4bafc;
 	font-family: 'Berkshire Swash', cursive;
 	font-weight: normal;
 	font-size: 36px;
@@ -416,7 +416,7 @@ header .navbar.sticky-header{
 	display: block;
 	width: 40px;
 	height: 4px;
-	background: #CCCCFF;
+	background: #ff5d56;
 	position: absolute;
 	left: 0;
 	bottom: 0;
@@ -453,7 +453,7 @@ header .navbar.sticky-header{
 }
 
 .about-content ul li i{
-	color: #CCCCFF;
+	color: #ff5d56;
 	font-size: 20px;
 	position: absolute;
 	top: 0;
@@ -473,7 +473,7 @@ header .navbar.sticky-header{
 	color: #fff;
 	font-size: 18px;
 	font-weight: 400;
-	background: #CCCCFF;
+	background: #ff5d56;
 	padding: 14px 20px;
 	text-transform: uppercase;
 	margin-bottom: 50px;
@@ -505,7 +505,7 @@ header .navbar.sticky-header{
 }
 
 .experience-single h5{
-	color: #CCCCFF;
+	color: #ff5d56;
 	font-weight: 400;
 }
 
@@ -539,7 +539,7 @@ header .navbar.sticky-header{
 
 .education-pagination .swiper-pagination-bullet-active,
 .experience-pagination .swiper-pagination-bullet-active{
-	border-color: #CCCCFF;
+	border-color: #ff5d56;
 }
 
 /***************************************/
@@ -590,7 +590,7 @@ header .navbar.sticky-header{
 
 .counter-single .icon-box{
 	font-size: 50px;
-	color: #CCCCFF;
+	color: #ff5d56;
 	line-height: 80px;
 	margin-bottom: 10px;
 	width: 80px;
@@ -648,9 +648,9 @@ header .navbar.sticky-header{
 } */
 
 /* .portfolio-nav ul li a.active-portfolio{
-	background: #CCCCFF;
+	background: #ff5d56;
 	color: #fff;
-	border-color: #CCCCFF;
+	border-color: #ff5d56;
 } */
 
 .single-portfolio{
@@ -681,7 +681,7 @@ header .navbar.sticky-header{
 .single-portfolio-overlay h3{
 	font-weight: 400;
 	font-size: 18px;
-	color: #CCCCFF;
+	color: #ff5d56;
 	opacity: 0;
 	transition: all 0.8s;
 }
@@ -763,7 +763,7 @@ header .navbar.sticky-header{
 
 .mfp-content .content .desc h5{
 	font-size: 20px;
-	color: #CCCCFF;
+	color: #ff5d56;
 	font-weight: 400;
 	margin-bottom: 20px;
 }
@@ -786,8 +786,8 @@ header .navbar.sticky-header{
 }
 
 .btn-view-project:hover{
-	border-color: #CCCCFF;
-	color: #CCCCFF;
+	border-color: #ff5d56;
+	color: #ff5d56;
 	background: none;
 }
 
@@ -838,7 +838,7 @@ header .navbar.sticky-header{
 	display: block;
 	width: 32px;
 	height: 32px;
-	background: #CCCCFF;
+	background: #ff5d56;
 	color: #fff;
 	line-height: 32px;
 	font-size: 14px;
@@ -865,7 +865,7 @@ header .navbar.sticky-header{
 .testimonial-header h4{
 	font-size: 18px;
 	font-weight: 400;
-	color: #CCCCFF;
+	color: #ff5d56;
 }
 
 .testimonial-single p{
@@ -888,7 +888,7 @@ header .navbar.sticky-header{
 }
 
 .testimonial-pagination .swiper-pagination-bullet-active{
-	background: #CCCCFF;
+	background: #ff5d56;
 }
 
 
@@ -917,8 +917,8 @@ header .navbar.sticky-header{
 .btn-contact{
 	background: none;
 	display: inline-block;
-    border: 1px solid #CCCCFF;
-    color: #CCCCFF;
+    border: 1px solid #ff5d56;
+    color: #ff5d56;
     padding: 12px 30px;
 	cursor: pointer;
 	margin-top: 20px;
@@ -926,7 +926,7 @@ header .navbar.sticky-header{
 }
 
 .btn-contact:hover{
-	background: #CCCCFF;
+	background: #ff5d56;
 	color: #fff;
 }
 
@@ -958,8 +958,8 @@ header .navbar.sticky-header{
     left: -1px;
     right: -1px;
     bottom: -1px;
-    border-top: 1px solid #CCCCFF;
-    border-bottom: 1px solid #CCCCFF;
+    border-top: 1px solid #ff5d56;
+    border-bottom: 1px solid #ff5d56;
     transform: scale(0,1);
     transition: all 0.6s;
 }
@@ -972,8 +972,8 @@ header .navbar.sticky-header{
     left: -1px;
     right: -1px;
     bottom: -1px;
-    border-left: 1px solid #CCCCFF;
-    border-right: 1px solid #CCCCFF;
+    border-left: 1px solid #ff5d56;
+    border-right: 1px solid #ff5d56;
     transform: scale(1,0);
     transition: all 0.6s;
 }
@@ -999,7 +999,7 @@ header .navbar.sticky-header{
 	width: 40px;
 	margin-left: -20px;
 	height: 3px;
-	background: #CCCCFF;
+	background: #ff5d56;
 	position: absolute;
 	left: 50%;
 	bottom: 0;
@@ -1034,7 +1034,7 @@ header .navbar.sticky-header{
 }
 
 .footer-logo h1 span{
-	color: #CCCCFF;
+	color: #ff5d56;
 }
 
 .footer-about{
@@ -1069,8 +1069,8 @@ header .navbar.sticky-header{
 
 .footer-social a:hover{
 	background: none;
-	border-color: #CCCCFF;
-	color: #CCCCFF;
+	border-color: #ff5d56;
+	color: #ff5d56;
 }
 
 .footer-copyright{
@@ -1105,7 +1105,7 @@ header .navbar.sticky-header{
 }
 
 .footer-copyright p a:hover{
-	color: #CCCCFF;
+	color: #ff5d56;
 }
 
 /*********************************/
