@@ -553,6 +553,7 @@ header .navbar.sticky-header{
 .skill-single {
 	text-align: center;
 	line-height:3em;
+	padding-bottom: 40px;
   }
 
   .skill-single li {
